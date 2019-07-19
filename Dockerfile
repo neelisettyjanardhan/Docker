@@ -7,7 +7,7 @@ COPY package.json .
 RUN npm install
 COPY . .
 
-# CMD node index.js
-CMD ["npm", "start"]
+CMD node index.js
+# CMD ["npm", "start"]
 
 EXPOSE 3000
