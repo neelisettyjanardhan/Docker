@@ -1,0 +1,17 @@
+version: "3"
+
+services:
+  # redis-server:
+  #   image: redis
+  node-app:
+    restart: on-failure
+    build: .
+    ports:
+      - "3000:3000"
+    volumes:
+      - .:/app
+      - /app/node_modules
+    environment:
+      -  NODE_ENV=development
+    command: npm run start
+
